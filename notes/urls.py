@@ -3,6 +3,10 @@ from rest_framework import routers
 from . import views
 
 router= routers.DefaultRouter()
-router.register('notes',views.NoteViewSet)
+
+"""
+Notes urls
+"""
+router.register('notes',views.NoteViewSet, basename='notes')
 
 urlpatterns =[path('', include(router.urls))]
